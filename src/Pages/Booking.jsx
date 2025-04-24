@@ -36,7 +36,7 @@ export default function Booking() {
 
   const navigate = useNavigate(); // ✅ correct usage inside component
   const handleBookFlight = (flight) => {
-    const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    const user = localStorage.getItem('loggedInUser');
   
     if (!user) {
       // Not logged in: redirect to login with redirect back to booking
